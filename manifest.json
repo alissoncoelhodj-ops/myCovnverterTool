@@ -1,0 +1,17 @@
+
+{
+  "short_name": "ConvHub",
+  "name": "Interactive Conversion Hub",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#f0f0f0",
+  "display": "standalone",
+  "scope": "./",
+  "theme_color": "#333333"
+}

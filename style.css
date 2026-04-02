@@ -1,0 +1,162 @@
+/* Ensure the page takes up the full height of the viewport and uses flexbox for layout */
+html, body {  
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 15px;
+    position: relative;
+}
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #3498db;
+    border-radius: 2px;
+}
+@media (max-width: 360px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+}
+/* Set the background color and font for the entire page */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh; /* Garante que o fundo cubra a tela toda */
+    margin: 0;
+    padding: 0;
+}
+/* Main content area that grows to fill available space, with padding and centered layout */
+main {  
+    flex: 1;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+/* Style for the conversion tool containers, initially hidden and styled as cards */
+.tool-container {
+    width: 95%;
+    max-width: 500px;
+    margin: 10px auto;
+    display: none; 
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    min-height: 400px;
+    margin-bottom: 20px;
+}
+/* Show the active tool container */
+.tool-container.active {  
+    display: block; 
+}
+.title-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.title-with-icon h2{
+   margin: 0;
+   
+}
+.icon{
+    height: 40px;
+    width: auto;
+    display: block;
+}
+ /* Container for currency buttons, using flexbox for layout and spacing */
+.currency-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+/* Style for currency buttons, including size, padding, and transition effects */
+.currency-btn { 
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s;
+    background-color: #f9f9f9;
+}
+/* Highlight the selected currency button with a border and shadow */
+.currency-btn.selected { 
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0,123,255,0.5);
+    transform: scale(1.1);
+}
+/* Ensure currency icons are appropriately sized and maintain aspect ratio */
+.currency-btn img { 
+    max-width: 50px; 
+    height: auto;
+}
+/* Style for warm temperature results, with a light background and colored border */
+.temp-warm { 
+    background-color: #ffecd2; 
+    border-left: 5px solid #ff7e5f;
+}
+/* Style for hot temperature results, with a light red background and darker red border */
+.temp-hot { 
+    background-color: #ffebee; 
+    border-left: 5px solid #d32f2f;
+}
+/* Style for cold temperature results, with a light blue background and darker blue border */
+.temp-cold { 
+    background-color: #a4b0b9; 
+    border-left: 5px solid #1976d2;
+}
+/* Style for the result display area, with margin, padding, bold text, and rounded corners */ 
+.result-display { 
+    margin-top: 20px;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+/* Footer styling with fixed height, background color, and centered text */
+footer { 
+    flex-shrink: 0;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 05px 0;
+    font-size: 0.85rem;
+    width: 100%;
+    margin: 0;
+}
+/* Style for the clear button, with background color, padding, and hover effect */
+.clear-btn {   
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+/* Change background color on hover for better user interaction feedback */
+.clear-btn:hover { 
+    background-color: #5a6268;
+}
+
+
