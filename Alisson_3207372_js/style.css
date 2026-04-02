@@ -1,0 +1,98 @@
+html, body {
+    min-height: 100%; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+main {
+    flex: 1 0 auto; 
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+.tool-container {
+    width: 95%;
+    max-width: 500px;
+    margin: 10px auto;
+    display: none; 
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    min-height: 400px;
+    margin-bottom: 20px;
+}
+.tool-container.active {
+    display: block; 
+}
+.currency-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+.currency-btn {
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s;
+    background-color: #f9f9f9;
+}
+.currency-btn.selected {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0,123,255,0.5);
+    transform: scale(1.1);
+}
+.currency-btn img {
+    max-width: 50px; 
+    height: auto;
+}
+.temp-warm {
+    background-color: #ffecd2; 
+    border-left: 5px solid #ff7e5f;
+}
+.temp-hot {
+    background-color: #ffebee; 
+    border-left: 5px solid #d32f2f;
+}
+.temp-cold {
+    background-color: #a4b0b9; 
+    border-left: 5px solid #1976d2;
+}
+.result-display {
+    margin-top: 20px;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+footer {
+    flex-shrink: 0; 
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 01px 0;
+    width: 100%;
+}
+.clear-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.clear-btn:hover {
+    background-color: #5a6268;
+}
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>JS Coversion Tools</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#333333">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div class="page-container">
+        <header>
+            <h1>Interactive Conversion Hub</h1>
+            <nav id="tool-selector">
+                <button onclick="showTool('temp-tool')">Temperature</button>
+                <button onclick="showTool('curr-tool')">Currency</button>
+                <button onclick="showTool('binary-tool')">Binary</button>
+            </nav>
+        </header>
+        <main>
+           <section id="temp-tool" class="tool-container">
+    <h2>Temperature Converter</h2>
+    <input type="number" id="temp-input" placeholder="Enter value">
+    <select id="temp-from">
+        <option value="C">Celsius</option>
+        <option value="F">Fahrenheit</option>
+        <option value="K">Kelvin</option>
+    </select>
+    <span> to </span>
+    <select id="temp-to">
+        <option value="F">Fahrenheit</option>
+        <option value="C">Celsius</option>
+        <option value="K">Kelvin</option>
+    </select>
+
+    <button onclick="convertTemperature()">Convert</button>
+    <button class="clear-btn" onclick="clearTool('temp')">Clear</button>
+    <p id="temp-result" class="result-display"></p>
+</section>
+            <section id="curr-tool" class="tool-container" style="display:none;">
+                <h2>Currency Converter</h2>
+                <input type="number" id="curr-input" placeholder="Enter amount">
+                <div class="currency-selection">
+                    <p>Select Base Currency:</p>
+                    <div class="currency-icons" id="from-icons">
+                        <span class="currency-btn selected" onclick="selectCurrency('USD', this, 'from')">🇺🇸
+                            USD</span>
+                        <span class="currency-btn" onclick="selectCurrency('EUR', this, 'from')">🇪🇺 EUR</span>
+                        <span class="currency-btn" onclick="selectCurrency('GBP', this, 'from')">🇬🇧 GBP</span>
+                        <span class="currency-btn" onclick="selectCurrency('BRL', this, 'from')">🇧🇷 BRL</span>
+                    </div>
+                    <p>Convert To:</p>
+                    <div class="currency-icons" id="to-icons">
+                        <span class="currency-btn" onclick="selectCurrency('USD', this, 'to')">🇺🇸 USD</span>
+                        <span class="currency-btn selected" onclick="selectCurrency('EUR', this, 'to')">🇪🇺 EUR</span>
+                        <span class="currency-btn" onclick="selectCurrency('GBP', this, 'to')">🇬🇧 GBP</span>
+                        <span class="currency-btn" onclick="selectCurrency('BRL', this, 'to')">🇧🇷 BRL</span>
+                    </div>
+                </div>
+                <button onclick="convertCurrency()">Convert</button>
+                <button class="clear-btn" onclick="clearTool('curr')">Clear</button>
+                <p id="curr-result"></p>
+            </section>
+            <section id="binary-tool" class="tool-container" style="display:none;">
+                <h2>Binary ⇄ Decimal</h2>
+                <input type="text" id="binary-input" placeholder="Enter value">
+                <select id="binary-type">
+                    <option value="DecToBin">Decimal → Binary</option>
+                    <option value="BinToDec">Binary → Decimal</option>
+                </select>
+                <button onclick="convertBinary()">Convert</button>
+                <button class="clear-btn" onclick="clearTool('binary')">Clear</button>
+                <p id="binary-result" class="result-display"></p>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>Name: Alisson Coelho | Student Number: 3207372</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
